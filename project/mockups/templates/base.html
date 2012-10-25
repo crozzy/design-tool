@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<head>
+    {% block head %}
+        {% for f in data.js %}
+            <script src="../static/{{ f }}"></script>
+        {% endfor %}
+        {% for f in data.css %}
+            <link rel="stylesheet" type="text/css" href="../static/{{ f }}">
+        {% endfor %}
+    {% endblock %}
+</head>
+
+
+
+<body class="internal">
+<!-- Start #container -->
+<div id="container">
+
+{% block header %}
+<!-- Start #header -->
+<div id="header">
+    <p id="logos">
+        <a id="logo-careesma" href="http://www.careesma.at/en/" title="jobs, job offers - Search jobs in Austria - Careesma">jobs, job offers - Search jobs in Austria - Careesma</a>
+    </p>
+    <ul id="main-nav">
+        <li><strong>Home</strong></li>
+        <li><a href="#" title="About us">About us</a></li>
+        <li><a href="http://weblog.careesma.at/" title="Blog">Careerblog</a></li>
+        <li class="login"><a href="16117-login.php" title="Log In" class="btn btn-pc btn-mini btn-login">Log In</a></li>
+        <li class="signup"><a href="16117-register.php" title="Sign up" class="btn btn-pc btn-mini btn-signup">Sign Up</a></li>
+    </ul>
+</div>
+{% endblock %}
+  
+
+{% block content %}{% endblock %}
+
+
+{% block footer %}
+<div id="footer">
+            
+    <ul class="generic">
+        <li><a href="/impressum" title="Corporate">Corporate Information</a></li>
+        <li><a href="/uber-uns" title="About Us">About us</a></li>
+        <li><a href="/sitemap" title="Sitemap">Sitemap</a></li>
+        <li><a href="/faq" title="See our FAQ">FAQ</a></li>
+        <li><a href="/datenschutz" title="Privacy">Privacy</a></li>
+        <li><a href="/nutzungsbedingungen" title="Terms of Use">Terms of use</a></li>
+        <li><a href="/allgemeine-vertragsbedingungen" title="Terms and Conditions">Terms and Conditions</a></li>
+        <li><a href="http://weblog.careesma.at" title="Careerblog">Careerblog</a></li>
+        <li><a href="http://www.recruitingclub.at/" title="Recruiting Club Blog">Recruiting Club Blog</a></li>
+    </ul>
+
+    <ul id="lang">
+        <li>
+            <form id="lang-form" action="/i18n/setlang/" method="post">
+                <input name="next" type="hidden" value="/kandidat/registrieren">
+                <input name="language" type="hidden" value="de-at">
+                <input class="sys-button" type="submit" value="Deutsch">
+            </form>
+        </li>
+    </ul>
+            
+    <ul class="corp-links">
+        <li><a href="http://www.careesma.com" title="Careesma.com">careesma.com</a></li>
+        <li><a href="http://www.infojobs.it" title="InfoJobs.it">Italy</a></li>
+        <li><a href="http://www.infopraca.pl" title="infoPraca.pl">Poland</a></li>
+        <li><a href="http://www.careesma.in" title="Careesma.in">India</a></li>
+        <li><a href="http://www.clickindia.com" title="Clickindia">Free Ads in India</a></li>
+    </ul>
+    
+    <p class="copyright">&copy; 2006-2012 Careesma. All rights reserved.</p>
+
+</div>
+{% endblock %}
+</div>
+<script src="../static/inline-forms.js"></script>
+</body>
+</html>
+

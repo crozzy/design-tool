@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+
+  
+<!-- Start #content -->
+<div id="content" class="login-page">
+    
+    <h1>Already registered? Login with:</h1>
+    
+    <!-- Start #main-content -->
+    <div id="main-content">
+        <div class="social-auth">
+            <ul>
+                <li><a href="#" class="btn btn-auth btn-auth-linkedin btn-big">Linkedin</a></li>
+                <li><a href="#" class="btn btn-auth btn-auth-facebook btn-big">Facebook</a></li>
+            </ul>
+        </div>
+        <h2>Or login here</h2>
+        <form class="form-signup" id="fm-signup" action="en/candidate/signup" method="post">
+                <fieldset>
+                    <ul>
+                        <li>
+                            <label for="signupIdentifier" class="mandatory">Email <img src="../static/img/icons/mandatory.png" alt="Mandatory field" title="Mandatory field"></label>
+                            <input type="text" placeholder="Email" size="25" name="signupIdentifier" id="signupIdentifier" maxlength="60" autofocus="autofocus">                    
+                        </li>
+                        <li>
+                            <label for="signupPassword" class="mandatory">Password <img src="../static/img/icons/mandatory.png" alt="Mandatory field" title="Mandatory field"></label>
+                            <input type="password" placeholder="Passwords" size="25" name="signupPassword" id="signupPassword" maxlength="50">                  
+                        </li>
+                        
+                        <li>
+                            <input type="submit" class="btn btn-primary btn-big" value="Login">
+                        </li>
+                    </ul>
+                    <p class="other-links">
+                        <a href="#" title="Reset your password">I forgot my password</a><br>
+                        New to Careesma? <a href="#">Sign up</a>
+                    </p>
+                    <p class="other-links">
+                        <a href="#" class="btn btn-pe btn-mini">Are you an employer?</a><br><a href="#">Find the ideal candidate</a>
+                    </p>
+                </fieldset>
+        </form>
+    </div>
+    <!-- End #main-content -->
+</div>
+<!-- End #content -->
+
+
+</div>
+<!-- End #container -->
+
+{% endblock %}
+
+

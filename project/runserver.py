@@ -1,2 +1,7 @@
+import socket
 from mockups import app
-app.run(debug=True)
+
+try:
+    app.run(debug=True)
+except socket.error:
+    print "The server is already running."

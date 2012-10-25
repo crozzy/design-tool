@@ -4,7 +4,7 @@ import os
 import subprocess
 import logging
 import glob
-
+import shutil
 logger = logging.getLogger('admin')
 
 # Helpers from utils
@@ -59,6 +59,15 @@ def pip_install(venv, *args):
         *args,
         env=dict(PIP_DOWNLOAD_CACHE='~/.local/share/pip-cache'))
 
+def commit_changes():
+    pass
+
+def create_hg_tag():
+    pass
+
+def push_hg_tag(tag, repo):
+    pass 
+
 # COMMANDS
 def cmd_install_deps():
     make_virtualenv(VENVDIR)
@@ -68,6 +77,37 @@ def cmd_install_deps():
 # TODO(jcrosland): Make more generic/moveable
 def cmd_runserver():
     proccall(os.path.join(VENVDIR, 'bin/python'), 'runserver.py')
+
+def cmd_start_mockup(mock_name):
+    # Create hg tag and use it
+    assert mock_name
+    extensions = {'html':'templates', 'ini':'data'}
+    new_files = ['./mockups/%s/%s.%s' % (dir, mock_name, ext) for ext, dir in extensions.items()]
+    temp_files = ['./mockups/%s/template.%s' % (dir, ext) for ext, dir  in extensions.items()]
+    files_old_new = dict(zip(temp_files, new_files))
+    if os.path.exists(new_files[0]) or os.path.exists(new_files[0]):
+        print "Already created this mockup"
+        return
+    for old, new in files_old_new.items():
+        shutil.copy(old, new)
+    try:
+        cmd_runserver()
+    except subprocess.CalledProcessError:
+        pass
+    url = 'http://127.0.0.1:5000/mockups/' + mock_name
+    print 'Created: %s' % url
+    # Create hg tag and use it
+    # Return list of files to edit
+    # Return localhost url
+    pass
+
+def cmd_publish_mockup():
+    # hg add all appropriate files
+    # hg commit (message in args?)
+    # rsync files to remote server
+    # Restart remote server
+    # Return address
+    pass
 
 def main(cmd, *args):
     cmd_func = globals()['cmd_' + cmd.replace('-', '_')]

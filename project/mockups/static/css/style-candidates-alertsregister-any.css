@@ -1,0 +1,37 @@
+#content > p {margin-bottom:40px;}
+#main-content {width:420px;}
+.form-signup {overflow:auto;}
+.form-signup li:last-child {border:none;}
+#signupIdentifier, #signupPassword {width:290px;margin:0;padding:5px;font-size:14px;}
+#content.login-page {width:510px;margin:30px auto 0;position:relative;z-index:10;}
+.optionsContainer {width:286px;height:68px;}
+label {width:100px;}
+label span.error {width:290px;left:110px;}
+.disclaimer {font-size:10px;color:#666}
+p.disclaimer {clear:both;padding-top:10px;}
+form .disclaimer {float:right;width:278px;margin:0;}
+.ui-dialog form {z-index:1003;}
+.form-signup ul {overflow:auto;margin-bottom:30px;}
+.form-signup .check, .form-signup .btn-primary {margin-left:110px;}
+.other-links {clear:both;float:left;width:298px;margin: 0 0 0 110px;padding: 15px 0;color:#858585;border:dotted #ccc;border-width:1px 0 0;}
+.social-connect {margin-left:110px;}
+.social-connect li {float:left;margin: 0 20px 20px 0;}
+#sub-content {width:330px;}
+#sub-content h2, #sub-content h3 {margin:0;color:#333338;}
+#sub-content li {margin-top:30px;line-height:1.5em;}
+#sub-content h2 {font-size:16px;}
+#sub-content h3 {font-size:13px;}
+.social-auth {margin-bottom:30px;padding-bottom:15px;overflow:auto;}
+.social-auth li {float:left;margin-right:10px;}
+
+/* Start comment: activate these styles for new social login buttons
+a.btn-auth-twitter{color:#fff;background-color:#33bfed;background-image:-webkit-linear-gradient(top,#33bfed,#2aa5d3);background-image:-moz-linear-gradient(top,#33bfed,#2aa5d3);background-image:-ms-linear-gradient(top,#33bfed,#2aa5d3);background-image:-o-linear-gradient(top,#33bfed,#2aa5d3);background-image:linear-gradient(top,#33bfed,#2aa5d3);border:1px solid #1e7697;text-shadow:0 -1px 0 #1e7697;}
+a.btn-auth-twitter:active{background-image:-webkit-linear-gradient(top,#2aa5d3,#33bfed);background-image:-moz-linear-gradient(top,#2aa5d3,#33bfed);background-image:-ms-linear-gradient(top,#2aa5d3,#33bfed);background-image:-o-linear-gradient(top,#2aa5d3,#33bfed);background-image:linear-gradient(top,#2aa5d3,#33bfed);}
+
+a.btn-auth-google{color:#444;background-color:#3289b0;background-image:-webkit-linear-gradient(top,#f8f8f8,#f4f4f4);background-image:-moz-linear-gradient(top,#f8f8f8,#f4f4f4);background-image:-ms-linear-gradient(top,#f8f8f8,#f4f4f4);background-image:-o-linear-gradient(top,#f8f8f8,#f4f4f4);background-image:linear-gradient(top,#f8f8f8,#f4f4f4);border:1px solid #d6d6d6;text-shadow:0 1px 0 #fff;}
+a.btn-auth-google:active{background-image:-webkit-linear-gradient(top,#f4f4f4,#f8f8f8);background-image:-moz-linear-gradient(top,#f4f4f4,#f8f8f8);background-image:-ms-linear-gradient(top,#f4f4f4,#f8f8f8);background-image:-o-linear-gradient(top,#f4f4f4,#f8f8f8);background-image:linear-gradient(top,#f4f4f4,#f8f8f8);}
+
+a.btn-auth-yahoo{color:#444;background-color:#fdeb9e;background-image:-webkit-linear-gradient(top,#fdeb9e,#fce693);background-image:-moz-linear-gradient(top,#fdeb9e,#fce693);background-image:-ms-linear-gradient(top,#fdeb9e,#fce693);background-image:-o-linear-gradient(top,#fdeb9e,#fce693);background-image:linear-gradient(top,#fdeb9e,#fce693);border:1px solid #ecc746;text-shadow:0 1px 0 #fff;}
+a.btn-auth-yahoo:active{background-image:-webkit-linear-gradient(top,#fce693,#fdeb9e);background-image:-moz-linear-gradient(top,#fce693,#fdeb9e);background-image:-ms-linear-gradient(top,#fce693,#fdeb9e);background-image:-o-linear-gradient(top,#fce693,#fdeb9e);background-image:linear-gradient(top,#fce693,#fdeb9e);}
+End comment */
+
