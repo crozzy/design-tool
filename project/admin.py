@@ -37,7 +37,7 @@ def proccall(*cmd, **kw):
         p.stdin.close()
     subprocess.check_call(cmd, **kw)
 
-# Get virtualenv(or potential) virtualenv dir 
+# Get virtualenv(or potential) virtualenv dir
 VENVDIR = os.environ.get('ADMIN_VENV', os.path.dirname('../.virtualenv/jobdesign'))
 
 def make_virtualenv(venv_dir):
@@ -55,7 +55,7 @@ def virtualenv_activate(venv_dir, ignore_errors=False):
 
 def pip_install(venv, *args):
     return proccall(os.path.join(venv, 'bin/pip'), 'install',
-        '--no-index', '-f', 'http://labs.careesma.lan/archive/pip/',
+        '--no-index', '-f', 'XXXXXXXXXXX',
         *args,
         env=dict(PIP_DOWNLOAD_CACHE='~/.local/share/pip-cache'))
 
@@ -66,7 +66,7 @@ def create_hg_tag():
     pass
 
 def push_hg_tag(tag, repo):
-    pass 
+    pass
 
 # COMMANDS
 def cmd_install_deps():
